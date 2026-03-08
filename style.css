@@ -1,34 +1,186 @@
-.parent {
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --bg-header: #0a0a0a;
+    --text-main: #f0f0f0;
+    --text-muted: #a0a0a0;
+    --pink-light: #ff6b9e;
+    --pink-main: #ff1493;
+    --pink-dark: #cc1076;
+    --border-subtle: #2f2f2f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Header & Logo */
+.site-header {
+    background-color: var(--bg-header);
+    padding: 1.5rem 2rem;
     display: flex;
-    flex-flow: row wrap;
-    
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--pink-main);
+    box-shadow: 0 4px 20px rgba(255, 20, 147, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.col {
-    padding: 0 2.5%;
-    width: 28.33%;
-    flex: auto;
-}
-
-.wrap {
+.logo {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.wrap > nav {
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.highlight {
+    color: var(--pink-main);
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--pink-light);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--pink-light);
+    text-shadow: 0 0 8px rgba(255, 107, 158, 0.5);
+}
+
+.main-nav a:hover::after {
     width: 100%;
 }
 
-.wrap > .articles {
-    display: flex;
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
 }
 
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    /* subtle pink glow */
+    text-shadow: 0 0 15px rgba(255, 20, 147, 0.4);
+}
 
-@media(max-width: 40em) {
-    .wrap > nav {
-        order: 2;
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* Cards & Flexbox Layout */
+.parent {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.col.card {
+    background-color: var(--bg-card);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-subtle);
+    width: 30%;
+    min-width: 320px;
+    flex: 1 1 320px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.col.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(255, 20, 147, 0.2);
+    border-color: var(--pink-dark);
+}
+
+.col.card h2 {
+    color: var(--pink-main);
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    border-bottom: 2px solid var(--border-subtle);
+    padding-bottom: 0.5rem;
+    transition: border-color 0.4s ease;
+}
+
+.col.card:hover h2 {
+    border-color: var(--pink-main);
+}
+
+.col.card p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    flex-grow: 1;
+}
+
+code {
+    background-color: var(--bg-header);
+    color: var(--pink-light);
+    padding: 0.2rem 0.4rem;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.9em;
+    border: 1px solid var(--border-subtle);
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
     }
-    .wrap > .articles {
-        order: 1;
+    
+    .hero h1 {
+        font-size: 2.5rem;
     }
 }

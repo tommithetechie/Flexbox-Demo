@@ -1,63 +1,67 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Flexbox practice</title>
 
-        <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-    </head>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Flexbox Shenanigans</title>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
 
+<body>
+	<header class="site-header">
+		<div class="logo">
+			<span class="logo-icon">✨</span>
+			<span class="logo-text">Flex<span class="highlight">Box</span>ed In</span>
+		</div>
+		<nav class="main-nav">
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+		</nav>
+	</header>
 
-    <body>
+	<main>
+		<div class="hero">
+			<h1>Welcome to the Flex Zone</h1>
+			<p>Where elements finally do what you tell them to. Sort of.</p>
+		</div>
 
-        
-<div class="parent">
-	<div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
-	<div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
-	<div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
-    <div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
-    <div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
-    <div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
-    <div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
-    <div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
-    <div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
+		<div class="parent">
+			<div class="col card">
+				<h2>The <code>flex-basis</code> Dilemma</h2>
+				<p>I told my flex item to have a basis of 200px. It said, "Best I can do is 150px." Then the image
+					overflowed anyway. Classic.</p>
+			</div>
+			<div class="col card">
+				<h2>Centering a Div</h2>
+				<p>Before Flexbox: Blood, sweat, tears, margins, clearfixes, absolute positioning.<br><br>After Flexbox:
+					<code>display: flex; justify-content: center; align-items: center;</code><br><br>It's basically
+					magic.</p>
+			</div>
+			<div class="col card">
+				<h2><code>space-between</code></h2>
+				<p>When you want your elements to socially distance exactly evenly from each other. Introvert-friendly
+					CSS at its finest.</p>
+			</div>
+			<div class="col card">
+				<h2>The Flex Wrap Incident</h2>
+				<p>I forgot to set <code>flex-wrap: wrap;</code> and suddenly all my beautiful cards were squished into
+					little tiny illegible slivers. It was a dark, unreadable day.</p>
+			</div>
+			<div class="col card">
+				<h2><code>order: 9999;</code></h2>
+				<p>For when you really, really need that one div to go to the back of the line, no questions asked. Take
+					a seat, div!</p>
+			</div>
+			<div class="col card">
+				<h2><code>align-self: center;</code></h2>
+				<p>Because sometimes one element in the flex container wants to be special and break all the container's
+					alignment rules. Typical diva behavior.</p>
+			</div>
+		</div>
+	</main>
+</body>
 
-    <div class="col">
-		<h2>Something</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quae in controversiam veniunt, de iis, si placet, disseramus. Nam de isto magna dissensio est. Ita nemo beato beatior. Duo Reges: constructio interrete.</p>
-	</div>
-
-</div>
-
-
-
-    </body>
 </html>
